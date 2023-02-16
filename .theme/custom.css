@@ -1,0 +1,79 @@
+/* GENERAL */
+
+    /* remove header color*/
+    .theme--dark.v-toolbar.v-sheet {
+        background-color: unset;
+    }
+    /* style header text */
+    .v-card header .subheading {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 300;
+        font-style: italic;
+        padding-right: 5px; /* needed for italic... */
+    }
+    /* remove panelheader icons*/
+    .v-card header .v-icon--left {
+        display: none;
+    }
+    /* remove horizonal dividers */
+    .theme--dark.v-divider {
+        border: unset !important;
+    }
+    .v-sheet.v-card:not(.v-sheet--outlined) {
+        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+    }
+
+
+/* TEMPGRAPH */ 
+    /* remove horizonal lines */
+    .theme--dark.temperature-panel-table td,
+    .theme--dark.temperature-panel-table th{
+        border-bottom: unset !important;
+    }
+    /* increase row height */
+    .theme--dark.temperature-panel-table tr {
+        height: 3.5em !important;
+    }
+
+/* WEBCAM */
+    /* zoom in to remove vertical line */
+    div:has(.webcamImage){
+        overflow: hidden;
+    }
+    .webcamImage {
+        transform: scale(1.006) !important;
+    }
+    /* remove fps counter */
+    .webcamFpsOutput {
+        display: none !important;
+    }
+
+/* MINI CONSOLE */
+    /* inputfield - remove shadow */
+    .miniconsole-panel .v-input__slot {
+        box-shadow: unset !important;
+    }
+    /* inputfield - remove border */
+    .miniconsole-panel fieldset {
+        border: unset !important;
+    }
+    /* inputfield - change padding */
+    .miniconsole-panel .v-card__text {
+        padding: 0.5em;
+    }
+    /* inputfield - label darker color + case */
+    .miniconsole-panel label {
+        color: hsla(0, 0%, 100%, .2) !important;
+        text-transform: uppercase;
+    }
+
+
+    /* remove horizonal lines */
+    .miniconsole-panel .col{
+        border-top: unset !important;
+    }
+    /* remove last child of console - most likely info text */
+    .miniconsole-panel .consoleTable .row:last-child {
+      -display: none;
+    }
